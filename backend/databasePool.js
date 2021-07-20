@@ -1,0 +1,10 @@
+const { Pool } = require('pg');
+const databaseConfiguration = require('./secrets/databaseConfiguration');
+const pool = new Pool(databaseConfiguration);
+module.exports = pool;
+
+// pool.query('SELECT foo FROM generation', (error, response) => {
+//   if (error) return console.log('error', error);
+
+//   console.log('reponse.rows', response.rows);
+// });
